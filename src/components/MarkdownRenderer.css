@@ -1,0 +1,213 @@
+.markdown-content {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.7;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.markdown-content p,
+.markdown-content strong,
+.markdown-content em,
+.markdown-content span,
+.markdown-content div {
+  font-family: inherit;
+}
+
+/* Loading and error states */
+.markdown-loading,
+.markdown-error {
+  padding: var(--spacing-xl);
+}
+
+.loading-text {
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.error-message {
+  color: var(--accent);
+  font-family: var(--font-code);
+  font-size: 0.9rem;
+}
+
+.error-help {
+  margin-top: var(--spacing-md);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-family: var(--font-code);
+}
+
+/* Headings */
+.markdown-h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--bg-border);
+  scroll-margin-top: 80px;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+.markdown-h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  scroll-margin-top: 80px;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+.markdown-h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  scroll-margin-top: 80px;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Lists */
+.markdown-content ul,
+.markdown-content ol {
+  margin-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  padding-left: var(--spacing-md);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.markdown-content li {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.7;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.markdown-content li::marker {
+  color: var(--text-muted);
+}
+
+/* Code blocks */
+.code-block {
+  position: relative;
+  margin: var(--spacing-md) 0;
+}
+
+.code-block-lang {
+  font-family: var(--font-code);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+  padding-left: var(--spacing-sm);
+}
+
+.markdown-content pre {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--bg-border);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-md);
+  overflow-x: auto;
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.markdown-content code {
+  font-family: var(--font-code);
+  font-size: 0.9em;
+}
+
+.markdown-content :not(pre) > code {
+  background-color: var(--bg-secondary);
+  padding: 2px 6px;
+  border-radius: var(--border-radius);
+  color: var(--text-primary);
+}
+
+/* Blockquotes */
+.markdown-blockquote {
+  margin: var(--spacing-md) 0;
+  padding: var(--spacing-md);
+  border-left: 3px solid var(--accent);
+  background-color: var(--accent-muted);
+  color: var(--text-primary);
+  font-style: normal;
+}
+
+.markdown-blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* Links */
+.markdown-link {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.markdown-link:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* Tables */
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing-md) 0;
+  font-size: 0.9rem;
+}
+
+.markdown-content th,
+.markdown-content td {
+  text-align: left;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-bottom: 1px solid var(--bg-border);
+}
+
+.markdown-content th {
+  font-weight: 600;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+}
+
+.markdown-content tr:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Images */
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  margin: var(--spacing-md) 0;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--bg-border);
+}
+
+/* Horizontal rule */
+.markdown-content hr {
+  border: none;
+  border-top: 1px solid var(--bg-border);
+  margin: var(--spacing-xl) 0;
+}
+
+/* Task lists */
+.markdown-content input[type='checkbox'] {
+  margin-right: var(--spacing-sm);
+  accent-color: var(--accent);
+}
+
+/* Preserve whitespace in pre/code blocks */
+.markdown-content pre,
+.markdown-content code {
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.markdown-content pre {
+  white-space: pre;
+  overflow-x: auto;
+}

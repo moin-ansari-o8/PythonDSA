@@ -1,0 +1,49 @@
+/* Layout structure */
+.app {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Content area - adjusted for right TOC */
+.content {
+  flex: 1;
+  padding: var(--spacing-xl);
+  max-width: calc(100vw - var(--nav-width) - 240px); /* Account for left nav + right TOC */
+  margin-left: var(--nav-width);
+  margin-right: 240px; /* Space for right TOC */
+}
+
+/* Responsive: remove right margin on smaller screens */
+@media (max-width: 1200px) {
+  .content {
+    max-width: calc(100vw - var(--nav-width));
+    margin-right: 0;
+  }
+}
+
+/* Markdown content styling */
+.markdown-content {
+  font-family: var(--font-body);
+  max-width: var(--content-max-width);
+}
+
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  margin: var(--spacing-md) 0;
+}
+
+.markdown-content pre {
+  max-width: 100%;
+}
+
+/* Code block meta info */
+.markdown-content pre .language-id {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}

@@ -1,0 +1,183 @@
+.progress-page h1 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.progress-subtitle {
+  font-family: var(--font-code);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Summary section */
+.progress-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--bg-border);
+  border-radius: var(--border-radius);
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.summary-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--font-code);
+}
+
+.summary-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent);
+  font-family: var(--font-code);
+}
+
+/* Weeks container */
+.weeks-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.week-card {
+  padding: var(--spacing-lg);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--bg-border);
+  border-radius: var(--border-radius);
+  border-left-width: 3px;
+}
+
+.week-card.status-completed {
+  border-left-color: var(--accent);
+}
+
+.week-card.status-in-progress {
+  border-left-color: var(--accent);
+  opacity: 1;
+}
+
+.week-card.status-not-started {
+  border-left-color: var(--bg-border);
+  opacity: 0.7;
+}
+
+.week-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.week-title {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.week-status {
+  font-size: 1.25rem;
+  color: var(--accent);
+}
+
+.week-topics {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  font-family: var(--font-code);
+}
+
+/* Problems list */
+.problems-list {
+  margin-top: var(--spacing-md);
+}
+
+.problems-heading {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.problem-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.problem-item input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--accent);
+  border: 1px solid var(--bg-border);
+}
+
+.problem-name {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.problem-item:hover .problem-name {
+  color: var(--accent);
+}
+
+.problem-item input:checked + .problem-name {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+/* Reflection section */
+.reflection-section {
+  margin-top: var(--spacing-xl);
+}
+
+.reflection-section h2 {
+  margin-bottom: var(--spacing-xs);
+}
+
+.reflection-hint {
+  font-family: var(--font-code);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+.reflection-input {
+  width: 100%;
+  max-width: 100%;
+  padding: var(--spacing-md);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--bg-border);
+  border-radius: var(--border-radius);
+  resize: vertical;
+  transition: border-color 0.2s ease;
+}
+
+.reflection-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.reflection-input::placeholder {
+  color: var(--text-muted);
+}
