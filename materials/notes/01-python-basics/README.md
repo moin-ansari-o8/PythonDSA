@@ -17,21 +17,6 @@ This isn't "Python 101". This is "Python techniques that make DSA easier."
 
 ---
 
-## 📚 Table of Contents
-
-1. [Lists - The Array Equivalent](#1-lists)
-2. [Strings - Immutable Sequences](#2-strings)
-3. [Dictionaries - Hash Maps](#3-dictionaries)
-4. [Sets - For Uniqueness](#4-sets)
-5. [Tuples - Immutable Lists](#5-tuples)
-6. [Collections Module](#6-collections-module)
-7. [Heapq Module](#7-heapq-module)
-8. [Essential Built-in Functions](#8-essential-built-in-functions)
-9. [List Comprehensions](#9-list-comprehensions)
-10. [Time Complexity Cheatsheet](#10-time-complexity-cheatsheet)
-
----
-
 ## 1. Lists
 
 ### **What You Need to Know:**

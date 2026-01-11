@@ -7,6 +7,15 @@ export function Breadcrumb() {
 
   if (pathSegments.length === 0) return null;
 
+  // Special case: if on overview page, show only "overview"
+  if (pathSegments.length === 2 && pathSegments[0] === "notes" && pathSegments[1] === "overview") {
+    return (
+      <nav className="breadcrumb" aria-label="Breadcrumb">
+        <span className="breadcrumb-item current">overview</span>
+      </nav>
+    );
+  }
+
   const breadcrumbs = pathSegments.map((segment, index) => {
     const path = "/" + pathSegments.slice(0, index + 1).join("/");
     const label = segment.replace(/-/g, " ");
@@ -21,12 +30,9 @@ export function Breadcrumb() {
 
   return (
     <nav className="breadcrumb" aria-label="Breadcrumb">
-      <Link to="/" className="breadcrumb-item">
-        home
-      </Link>
       {breadcrumbs.map((crumb, index) => (
         <span key={index} className="breadcrumb-segment">
-          <span className="breadcrumb-separator">/</span>
+          {index > 0 && <span className="breadcrumb-separator">/</span>}
           {crumb.isLast ? (
             <span className="breadcrumb-item current">{crumb.label}</span>
           ) : (

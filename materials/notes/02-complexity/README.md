@@ -15,18 +15,6 @@ Before you write a single line of code in interviews:
 
 ---
 
-## 📚 Table of Contents
-
-1. [What is Big O Notation?](#1-what-is-big-o)
-2. [Common Time Complexities](#2-common-complexities)
-3. [How to Calculate Time Complexity](#3-calculate-time-complexity)
-4. [Space Complexity](#4-space-complexity)
-5. [Best, Average, Worst Cases](#5-best-average-worst)
-6. [Common Patterns Recognition](#6-patterns)
-7. [Practice Examples](#7-practice)
-
----
-
 ## 1. What is Big O?
 
 ### **Simple Definition:**
