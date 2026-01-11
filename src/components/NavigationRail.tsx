@@ -11,19 +11,9 @@ interface NavItem {
 
 const navigationData: NavItem[] = [
   {
-    id: "start",
-    title: "00-START-HERE",
-    path: "/notes/00-START-HERE",
-  },
-  {
-    id: "roadmap",
-    title: "00-ROADMAP",
-    path: "/notes/00-ROADMAP",
-  },
-  {
-    id: "how-to-learn",
-    title: "00-HOW-TO-LEARN",
-    path: "/notes/00-HOW-TO-LEARN",
+    id: "overview",
+    title: "Overview",
+    path: "/notes/overview",
   },
   {
     id: "notes",
@@ -115,40 +105,24 @@ export function NavigationRail() {
     });
   };
 
-  const isActive = (path: string) => {
-    // Exact match or child route match, but not parent match
-    if (location.pathname === path) return true;
-
-    // For paths with children, only match if it's a direct child
-    // Prevent /notes from matching when on /notes/00-START-HERE
-    if (
-      path === "/notes" ||
-      path === "/problems" ||
-      path === "/solutions" ||
-      path === "/templates" ||
-      path === "/cheatsheets" ||
-      path === "/progress"
-    ) {
-      return location.pathname === path;
+  const isActive = (path: string, hasChildren: boolean = false) => {
+    // Parent items with children should NEVER be active
+    if (hasChildren) {
+      return false;
     }
 
-    // For specific note paths, match if pathname starts with it
-    return (
-      location.pathname.startsWith(path + "/") || location.pathname === path
-    );
+    // Exact match only for all links
+    return location.pathname === path;
   };
 
   const renderNavItem = (item: NavItem, depth = 0) => {
     const hasChildren = item.children && item.children.length > 0;
     const isExpanded = expandedSections.has(item.id);
-    const active = isActive(item.path);
+    const active = isActive(item.path, hasChildren);
 
     return (
       <div key={item.id} className="nav-item-wrapper">
-        <div
-          className={`nav-item depth-${depth} ${active ? "active" : ""}`}
-          style={{ paddingLeft: `${depth * 16 + 16}px` }}
-        >
+        <div className={`nav-item depth-${depth} ${active ? "active" : ""}`}>
           {hasChildren ? (
             <button
               onClick={() => toggleSection(item.id)}

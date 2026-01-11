@@ -48,7 +48,7 @@
 ## 📁 Project Structure
 
 ```
-PythonDSA/
+PyMaster/
 ├── materials/                    # Source markdown content
 │   ├── notes/                   # Learning notes
 │   │   ├── 00-START-HERE.md
@@ -92,7 +92,7 @@ PythonDSA/
 ### Starting the Platform
 
 ```bash
-cd W:\workplace-1\PythonDSA
+cd W:\workplace-1\PyMaster
 npm run dev
 ```
 

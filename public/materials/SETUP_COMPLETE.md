@@ -1,4 +1,4 @@
-# ✅ PythonDSA - Complete System Built!
+# ✅ PyMaster - Complete System Built!
 
 > **Your comprehensive DSA learning system is ready!**
 
@@ -13,7 +13,7 @@ A complete, production-ready learning system for mastering Data Structures & Alg
 ## 📂 Complete Structure
 
 ```
-PythonDSA/
+PyMaster/
 │
 ├── README.md                           ✅ Main entry point
 │
@@ -284,8 +284,8 @@ PythonDSA/
 ## 🎯 Quick Start Commands
 
 ```bash
-# Navigate to your PythonDSA folder
-cd W:\workplace-1\PythonDSA
+# Navigate to your PyMaster folder
+cd W:\workplace-1\PyMaster
 
 # Open in VS Code (if you use it)
 code .

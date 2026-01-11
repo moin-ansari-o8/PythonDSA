@@ -73,12 +73,18 @@
   font-size: 0.85rem;
   transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease;
   text-align: left;
+  outline: none;
 }
 
 .nav-expand-btn:hover,
 .nav-link:hover {
   color: var(--text-primary);
   background-color: rgba(255, 255, 255, 0.03);
+}
+
+.nav-expand-btn:focus,
+.nav-link:focus {
+  outline: none;
 }
 
 .nav-item.active .nav-expand-btn,
@@ -104,5 +110,12 @@
 
 .nav-item.depth-1 .nav-expand-btn,
 .nav-item.depth-1 .nav-link {
+  padding-left: 32px;
+  font-size: 0.8rem;
+}
+
+.nav-item.depth-2 .nav-expand-btn,
+.nav-item.depth-2 .nav-link {
+  padding-left: 48px;
   font-size: 0.8rem;
 }

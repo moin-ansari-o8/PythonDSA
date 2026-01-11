@@ -61,7 +61,7 @@ This is a dark-mode educational web platform built with React + TypeScript + Vit
 ## Project Structure
 
 ```
-PythonDSA/
+PyMaster/
 ├── materials/               # Learning content (markdown files)
 │   ├── notes/              # Theory and concepts
 │   ├── problems/           # Problem statements
@@ -126,7 +126,7 @@ PythonDSA/
 
 ### Setup
 ```bash
-cd PythonDSA
+cd PyMaster
 npm install
 ```
 

@@ -3,6 +3,8 @@
   line-height: 1.7;
   color: var(--text-primary);
   font-size: 0.95rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .markdown-content p,

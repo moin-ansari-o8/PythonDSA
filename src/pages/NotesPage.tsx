@@ -5,9 +5,7 @@ interface NotesPageProps {
   notePath?: string;
 }
 
-export function NotesPage({
-  notePath = "notes/00-START-HERE",
-}: NotesPageProps) {
+export function NotesPage({ notePath = "notes/overview" }: NotesPageProps) {
   return (
     <div className="notes-page">
       <MarkdownRenderer filePath={notePath} />

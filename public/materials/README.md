@@ -28,7 +28,7 @@ By completing this program, you will:
 ## 📂 Repository Structure
 
 ```
-PythonDSA/
+PyMaster/
 │
 ├── notes/              ← 📚 START HERE! Complete theory & concepts
 │   ├── 00-START-HERE.md

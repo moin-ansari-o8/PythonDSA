@@ -13,7 +13,7 @@ import "./App.css";
 
 function NotesRoute() {
   const params = useParams();
-  const notePath = params["*"] || "00-START-HERE";
+  const notePath = params["*"] || "overview";
   return <NotesPage notePath={`notes/${notePath}`} />;
 }
 
@@ -27,7 +27,7 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={<Navigate to="/notes/00-START-HERE" replace />}
+              element={<Navigate to="/notes/overview" replace />}
             />
             <Route path="/notes/*" element={<NotesRoute />} />
             <Route path="/progress" element={<ProgressPage />} />
@@ -51,7 +51,7 @@ function App() {
             />
             <Route
               path="*"
-              element={<Navigate to="/notes/00-START-HERE" replace />}
+              element={<Navigate to="/notes/overview" replace />}
             />
           </Routes>
         </main>
